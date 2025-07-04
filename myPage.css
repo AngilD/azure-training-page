@@ -1,0 +1,135 @@
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(to right, #2563eb, #3b82f6);
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .btn-primary {
+      background: white;
+      color: #2563eb;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #e0e7ff;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section p, .section li {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .highlight {
+      background: #eff6ff;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      margin: 1.5rem 0;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #e2e8f0;
+      font-size: 0.95rem;
+    }
+    .cta {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f1f5f9;
+    }
+    .faq {
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #2563eb;
+    }
+    form {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    form button {
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #1d4ed8;
+    }
+    .thank-you-message {
+      display: none;
+      background: #d1fae5;
+      color: #065f46;
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .section h2 {
+        font-size: 1.5rem;
+      }
+      .btn-primary {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.95rem;
+      }
+    }
+  

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Training for University Students</title>
+   
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"></link>
+  <link href="myPage.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Learn Microsoft Azure</h1>
+    <p>Free Cloud Training for University Students</p>
+    <a href="#registration"><button class="btn-primary">Register Now</button></a>
+  </header>
+
+  <div class="section">
+    <h2>What You'll Learn</h2>
+    <ul>
+      <li>Azure Fundamentals (AZ-900)</li>
+      <li>Cloud Services & Virtual Machines</li>
+      <li>Storage, AI & Data Solutions</li>
+      <li>Certification Preparation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Why Azure?</h2>
+    <div class="highlight">
+      Azure is one of the top cloud platforms used by Fortune 500 companies. Mastering it opens doors to internships and jobs in tech.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What’s Included</h2>
+    <ul>
+      <li>Access to Azure for Students</li>
+      <li>Digital Certificate of Completion</li>
+      <li>Hands-on Labs & Projects</li>
+      <li>Live Q&A with Trainers</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Trainer</h2>
+    <p><strong>John Doe</strong>, Microsoft Certified Azure Instructor with 10+ years in cloud training and student mentorship.</p>
+  </div>
+
+  <div class="section" id="registration">
+    <h2>Register for the Training</h2>
+    <form id="registration-form">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <input type="text" name="university" placeholder="University Name" required />
+      <textarea name="message" placeholder="Any Questions (Optional)"></textarea>
+      <button type="submit">Submit Registration</button>
+      <div class="thank-you-message" id="thank-you">Thank you for registering! We'll be in touch soon.</div>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>FAQs</h2>
+    <div class="faq">
+      <strong>Is it free?</strong><br>
+      Yes, it's completely free for university students.
+    </div>
+    <div class="faq">
+      <strong>Do I need experience?</strong><br>
+      No prior cloud experience is required.
+    </div>
+    <div class="faq">
+      <strong>Will I get a certificate?</strong><br>
+      Yes, upon completing the training.
+    </div>
+  </div>
+
+  <footer>
+    Contact us at: afrotech@edu<br>
+    &copy; 2025 Azure Training Program
+  </footer>
+<!-- 
+  <script>
+    const form = document.getElementById('registration-form');
+    const thankYou = document.getElementById('thank-you');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        university: form.university.value,
+        message: form.message.value,
+      };
+      fetch('https://script.google.com/macros/s/AKfycbwKSWAEMBJzmiibyaZIzYl8MxlPITL-AKIJFCgLl4ZqkLZPVmil4JYCd4tUa90Rkmj95g/exec', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          form.reset();
+          thankYou.style.display = 'block';
+        } else {
+          alert('Something went wrong.');
+        }
+      }).catch(() => alert('Submission failed.'));
+    });
+  </script> -->
+  <script>
+  const form = document.getElementById('registration-form');
+  const thankYou = document.getElementById('thank-you');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch('https://script.google.com/macros/s/AKfycbwKSWAEMBJzmiibyaZIzYl8MxlPITL-AKIJFCgLl4ZqkLZPVmil4JYCd4tUa90Rkmj95g/exec', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(responseText => {
+      form.reset();
+      thankYou.style.display = 'block';
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      alert('Submission failed.');
+    });
+  });
+</script>
+
+</body>
+</html>
