@@ -110,25 +110,49 @@
   const form = document.getElementById('registration-form');
   const thankYou = document.getElementById('thank-you');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // form.addEventListener('submit', function (e) {
+  //   e.preventDefault();
 
-    const formData = new FormData(form);
+  //   const formData = new FormData(form);
 
-    fetch('https://script.google.com/macros/s/AKfycbwKSWAEMBJzmiibyaZIzYl8MxlPITL-AKIJFCgLl4ZqkLZPVmil4JYCd4tUa90Rkmj95g/exec', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(responseText => {
+  //   fetch('https://script.google.com/macros/s/AKfycbwKSWAEMBJzmiibyaZIzYl8MxlPITL-AKIJFCgLl4ZqkLZPVmil4JYCd4tUa90Rkmj95g/exec', {
+  //     method: 'POST',
+  //     body: formData
+  //   })
+  //   .then(response => response.text())
+  //   .then(responseText => {
+  //     form.reset();
+  //     thankYou.style.display = 'block';
+  //   })
+  //   .catch(error => {
+  //     console.error('Error!', error.message);
+  //     alert('Submission failed.');
+  //   });
+  // });
+    form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    university: form.university.value,
+    message: form.message.value,
+  };
+
+  fetch('https://learnazureafrotech-f3fwfqdmbdg3dubn.westeurope-01.azurewebsites.net/api/RegisterUser?', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  }).then(res => {
+    if (res.ok) {
       form.reset();
       thankYou.style.display = 'block';
-    })
-    .catch(error => {
-      console.error('Error!', error.message);
-      alert('Submission failed.');
-    });
-  });
+    } else {
+      alert('Something went wrong.');
+    }
+  }).catch(() => alert('Submission failed.'));
+});
+
 </script>
 
 </body>
